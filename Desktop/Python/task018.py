@@ -9,7 +9,6 @@
 
 N = int(input("Введите размер массива"))
 l = [0]*N
-min_distance = 1
 print("Введите значения массива")
 for i in range(len(l)):
     l[i] = int(input())
