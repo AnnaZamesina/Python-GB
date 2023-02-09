@@ -20,4 +20,3 @@ for element in l:
     if element == x:
         count += 1
 print(count)
-

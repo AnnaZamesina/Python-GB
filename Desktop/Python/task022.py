@@ -19,13 +19,13 @@ for i in range(len(list1)):
 
 M = int(input("Введите длину второго множества "))
 list2 = [0]*M
-s2=set()
+s2 = set()
 print("Заполните множество")
 for i in range(len(list2)):
     list2[i] = int(input())
     s2.add(list2[i])
+
 s3 = set()
-s3=s1.intersection(s2)
+s3 = s1.intersection(s2)
 
 print(sorted(s3))
-
