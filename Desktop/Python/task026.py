@@ -8,6 +8,7 @@ def power_of_number(a, b):
         return a
     return a * power_of_number(a, b-1)
 
+
 A = int(input('Введите число А: '))
 B = int(input('Введите число B: '))
 print(power_of_number(A, B))
