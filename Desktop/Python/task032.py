@@ -8,6 +8,6 @@ res = list()
 lowest_border = int(input('Минимальное число  '))
 highest_border = int(input('Максимальное число  '))
 for i in range(len(list1)):
-    if lowest_border < list1[i] < highest_border:
+    if lowest_border <= list1[i] <= highest_border:
         res.append(i)
 print(res)
