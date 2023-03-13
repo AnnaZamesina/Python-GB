@@ -13,14 +13,14 @@ public class task019 {
             array1.add(x);
         }
         System.out.println(array1.toString());
-        System.out.println(Collections.max(array1)); 
-        System.out.println(Collections.min(array1)); 
+        System.out.println(Collections.max(array1));
+        System.out.println(Collections.min(array1));
         double sum = 0;
         for (int i = 0; i < array1.size(); i++) {
             sum += array1.get(i);
         }
-        double average = sum/(array1.size());
+        double average = sum / (array1.size());
         System.out.println(average);
-    
+
     }
 }
