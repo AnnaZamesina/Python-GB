@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,7 +21,6 @@ public class task033 {
         for (int i = 0; i < 8; i++) {
             board.put(i, -1);
         }
-
         QueenPos(0);
     }
 
@@ -29,16 +29,14 @@ public class task033 {
             printBoard(board);
             return;
         }
-
-        for (int row = 0; row < 8; row++) {
-            int col;
-            for (col = 0; col < count; col++) {
-                if (board.get(col) == row || Math.abs(board.get(col) - row) == count - col)
+        for (int i = 0; i < 8; i++) {
+            int j;
+            for (j = 0; j < count; j++) {
+                if (board.get(j) == i || Math.abs(board.get(j) - i) == count - j)
                     break;
             }
-
-            if (col == count) {
-                board.put(col, row);
+            if (j == count) {
+                board.put(j, i);
                 QueenPos(count + 1);
             }
         }
@@ -46,13 +44,12 @@ public class task033 {
 
     public static void printBoard(Map<Integer, Integer> map) {
 
-        StringBuilder result = new StringBuilder("Вариант расстановки: ");
+        ArrayList <String> result = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
-            result.append(chess.get(i));
-            result.append(board.get(i) + 1);
-            if (i < 7) {
-                result.append(" ");
-            }
+            Integer num_int = board.get(i) + 1;
+            String num_str = num_int.toString();
+            result.add(chess.get(i)+ num_str);
+            
         }
         System.out.println(result);
     }
