@@ -58,7 +58,7 @@ public class start {
                 filterSetInt.add(notebook4.getRAM());
                 filterSetInt.add(notebook5.getRAM());
                 int count2=1;
-                Iterator <String> k = filterSetString.iterator();
+                Iterator <Integer> k = filterSetInt.iterator();
                 while (k.hasNext()) {
                     System.out.printf("%d - %s\n", count2, k.next());
                     count2++;
@@ -78,7 +78,7 @@ public class start {
                 filterSetInt.add(notebook4.getHDV());
                 filterSetInt.add(notebook5.getHDV());
                 int count3=1;
-                Iterator <String> l = filterSetString.iterator();
+                Iterator <Integer> l = filterSetInt.iterator();
                 while (l.hasNext()) {
                     System.out.printf("%d - %s\n", count3, l.next());
                     count3++;
