@@ -37,16 +37,11 @@ public class start {
                 filterSetString.add(notebook3.getModel());
                 filterSetString.add(notebook4.getModel());
                 filterSetString.add(notebook5.getModel());
-                Iterator <String> j = filterSetString.iterator();
-                int count=1;
-                while (j.hasNext()) {
-                    System.out.printf("%d - %s\n", count, j.next());
-                    count++;
-                }
+                PrintSTRArray(filterSetString);
                 System.out.println("Напишите уточняющий критерий");
                 String secondFilter = scn.nextLine();
                 for (Notebook element : set) {
-                    if (element.getModel().equals(secondFilter)) {
+                    if (element.getModel().toLowerCase().equals(secondFilter)) {
                         System.out.println(element);
                     }
                 }
@@ -57,12 +52,7 @@ public class start {
                 filterSetInt.add(notebook3.getRAM());
                 filterSetInt.add(notebook4.getRAM());
                 filterSetInt.add(notebook5.getRAM());
-                int count2=1;
-                Iterator <Integer> k = filterSetInt.iterator();
-                while (k.hasNext()) {
-                    System.out.printf("%d - %s\n", count2, k.next());
-                    count2++;
-                }
+                PrintINTArray(filterSetInt);
                 System.out.println("Напишите уточняющий критерий");
                 Integer secondFilter02 = scn.nextInt();
                 for (Notebook element : set) {
@@ -77,12 +67,7 @@ public class start {
                 filterSetInt.add(notebook3.getHDV());
                 filterSetInt.add(notebook4.getHDV());
                 filterSetInt.add(notebook5.getHDV());
-                int count3=1;
-                Iterator <Integer> l = filterSetInt.iterator();
-                while (l.hasNext()) {
-                    System.out.printf("%d - %s\n", count3, l.next());
-                    count3++;
-                }
+                PrintINTArray(filterSetInt);
                 System.out.println("Напишите уточняющий критерий");
                 Integer secondFilter03 = scn.nextInt();
                 for (Notebook element : set) {
@@ -95,16 +80,11 @@ public class start {
                 filterSetString.add(notebook2.getOperatingSystem());
                 filterSetString.add(notebook3.getOperatingSystem());
                 filterSetString.add(notebook4.getOperatingSystem());
-                int count4=1;
-                Iterator <String> m = filterSetString.iterator();
-                while (m.hasNext()) {
-                    System.out.printf("%d - %s\n", count4, m.next());
-                    count4++;
-                }
+                PrintSTRArray(filterSetString);
                 System.out.println("Напишите уточняющий критерий");
                 String secondFilter04 = scn.nextLine();
                 for (Notebook element : set) {
-                    if (element.getOperatingSystem().equals(secondFilter04)) {
+                    if (element.getOperatingSystem().toLowerCase().equals(secondFilter04)) {
                         System.out.println(element);
                     }
                 }
@@ -117,7 +97,7 @@ public class start {
                 System.out.println("Напишите уточняющий критерий");
                 String secondFilter05 = scn.nextLine();
                 for (Notebook element : set) {
-                    if (element.getColor().equals(secondFilter05)) {
+                    if (element.getColor().equals(secondFilter05.toLowerCase())) {
                         System.out.println(element);
                     }
                 }
@@ -143,6 +123,22 @@ public class start {
     }
 
 
+    }
+    public static void PrintSTRArray(Set <String> StrSet) {
+        Iterator <String> j = StrSet.iterator();
+                int count=1;
+                while (j.hasNext()) {
+                    System.out.printf("%d - %s\n", count, j.next());
+                    count++;
+                }
+    }
+    public static void PrintINTArray(Set <Integer> IntSet) {
+        Iterator <Integer> j = IntSet.iterator();
+                int count=1;
+                while (j.hasNext()) {
+                    System.out.printf("%d - %s\n", count, j.next());
+                    count++;
+                }
     }
 }
               

@@ -75,6 +75,16 @@ public class Notebook {
     public boolean contains(String secondFilter) {
         return false;
     }
+    public void getProperty(String s){
+        switch (s) {
+            case "1":
+                getModel();
+                break;
+        
+            default:
+                break;
+        }
+    }
 
 }
 
